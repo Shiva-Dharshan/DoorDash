@@ -1,0 +1,981 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@100;300;400;500;800&family=Orbitron:wght@400;500;700&family=Poppins:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Montserrat+Alternates:wght@100;300;400;500;800&family=Orbitron:wght@400;500;700&family=Poppins:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,400;1,500&display=swap');
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+*{
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0;
+  font-family: 'poppins';
+}
+body::-webkit-scrollbar{
+  display: none;
+}
+.nav{
+  position: fixed;
+  padding: 0 5%;
+  width: 100%;
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+  box-shadow: 1px 1px 10px rgb(33, 36, 35);
+}
+.nav a{
+  color: black;
+  text-decoration: none;
+  transition: 0.2s all;
+}
+.buttons{
+  display: flex;
+  gap:10px;
+  align-items: center;
+}
+.buttons p{
+  font-size: 1.5pc;
+}
+.icon{
+  padding: 8px 0px;
+  display: flex;
+  align-items: center;
+  background: transparent;
+  gap: 10px;
+  justify-content: space-evenly;
+}
+.icon:hover{
+  cursor: pointer;
+}
+.icon span{
+  bottom: -5px;
+  left: 16pc;
+  background:linear-gradient(to right,rgb(0, 208, 255),rgb(30, 123, 210));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.icon img{
+  width: 5pc;
+  border-radius: 50%;
+}
+.nav ul{
+  list-style: none;
+  font-size: 28px;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+.nav li{
+  margin: 0px 10px;
+}
+.nav ul :nth-child(4) {
+  border: 2px solid red;
+  padding: 2px 1pc;
+  font-size: 1.5pc;
+  border-radius: 30px;
+  transition: 0.3s;
+}
+.nav ul :nth-child(4):hover{
+  background-color: rgb(255, 0, 0);
+}
+.nav a:hover{
+  color: rgb(1, 200, 255); 
+}
+.nav .bar_cont{
+  color: white;
+  font-size: 2pc;
+  margin-top: 10px;
+  display: none;
+}
+.drop{
+  right: 0;
+  top:4pc;
+  position: absolute;
+  z-index: 10;
+  backdrop-filter: blur(10px);
+  display: flex;
+  border: 2px solid rgb(0, 0, 0);
+  flex-direction: column;
+  padding: 10px 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  transition:0.3s linear all;
+}
+.drop a{
+  text-decoration: none;
+  color: black;
+}
+.drop li{
+  padding: 1pc 1pc;
+  list-style: none;
+}
+.drop ul :nth-child(4) {
+  border: 2px solid red;
+  padding: 2px 1pc;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+.drop ul :nth-child(4):hover{
+  background-color: rgb(255, 0, 0);
+}
+.xmark{
+  font-size: 2pc;
+  text-align: center;
+ 
+}
+/*-------------------------------------------------Login----------------------------------------------*/
+.section0{
+  width: 100%;
+  display: flex;
+  height: 100vh;
+}
+/* .part1{
+  width: 40%;
+  height: 100vh;
+  background-image: url('images/loginpage.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding: 0;
+  background-position: 80%;
+} */
+.part2{
+  height: 100vh;
+  /* background: radial-gradient(rgb(255, 255, 255),rgb(119, 0, 255)); */
+  /* padding-top: 5pc; */
+  /* background: linear-gradient(145deg,rgb(255, 243, 77),rgb(149, 0, 255)); */
+  width: 100%;
+  height: 100vh;
+  background-image: url('images/loginpage.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 0;
+  background-position: 80%;
+}
+.banner{
+  height: 50vh;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  gap: 2pc;
+}
+.banner h1{
+  font-size: 5pc;
+  background: linear-gradient(90deg,cyan,rgb(0, 255, 110));
+  -webkit-background-clip:text ;
+  -webkit-text-fill-color: transparent;
+}
+.banner-icon{
+  width: 15pc;
+  border-radius: 2pc;
+}
+p{
+  font-size: 2pc;
+  color: white;
+  text-align: center;
+  margin-bottom: 2pc;
+}
+.banner2 {
+  height: 50vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  text-align: center;
+}
+.login-{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  margin-top: 2pc;
+  gap: 10px;
+}
+.login- p{
+  font-size: 1.5pc;
+  margin-bottom: 0;
+}
+.login{
+  font-size: 22px;
+  padding: 5px 15px;
+  border-radius: 30px;
+  background-color: white;
+  border: 2px solid rgb(1, 200, 255);
+  outline: none;
+  cursor: pointer;
+  
+  transition: 0.3s;
+}
+.login:hover{
+  background-color: rgb(1, 200, 255);
+  color: white;
+}
+.start{
+  margin: auto;
+  font-size: 25px;
+  color:white;
+  font-family: 'Montserrat Alternates';
+  background-color:rgb(1, 200, 255);
+  border: 1px solid white;
+  padding:1pc 5pc;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: 0.3s all;
+  box-shadow: 1px 2px 2pc rgb(1, 200, 255);
+}
+.start:hover{
+  transform: scale(1.1);
+}
+.popup-cont{
+  width: 450px;
+  overflow: hidden;
+  height: 68vh;
+  background-color: rgb(26, 25, 25);
+  box-shadow: 5px 10px 10px black;
+  backdrop-filter: blur(8px);
+  border-radius: 10px;
+  border: none;
+  position: absolute;
+  top: 10pc;
+  right: 35%;
+}
+.close{
+  font-size: 2.5pc;
+  float: right;
+  color: red;
+  cursor: pointer;
+}
+.popup-cont form{
+  width: 100%;
+  height: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+input{
+  outline: none;
+  width: 90%;
+  padding: 10px 20px;
+  border: 2px solid rgb(0, 183, 255);
+  border-radius: 5px;
+  background-color: black;
+  color: white;
+  font-size: 20px;
+}
+.signup{
+  font-size: 22px;
+  padding: 10px 25px;
+  border-radius: 30px;
+  border: 2px solid rgb(255, 255, 255);
+  background-color: rgb(13, 85, 105);
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.signup:hover{
+  background-color: rgb(1, 200, 255);
+  color: white;
+}
+/*----------------------------Home-------------------------*/
+.section1{
+  width: 100%;
+  height: max-content;
+  background-color: white;
+}
+center h1{
+  font-size: 3pc;
+  margin-top: 10pc;
+}
+.Steps{
+  padding: 10px 2pc;
+  display: flex;
+  justify-content: space-around;
+  font-size: 1.5pc;
+  height: 70vh;
+  align-items: center;
+  cursor: default;
+}
+.step1{
+  color: white;
+  padding: 30px 20px;
+  background-color: rgb(0, 0, 0);
+  border: 2px solid rgb(0, 145, 255);
+  box-shadow: 0px 0px 10px rgb(0, 183, 255);
+  height: 75%;
+  width: 30%;
+  border-radius: 10px;
+  text-align: center;
+}
+span{
+  color: rgb(0, 255, 110);
+}
+.tick{
+  font-size: 3pc;
+}
+.Steps h1{
+  font-size: 2.5pc;
+}
+.container{
+  height: 100vh;
+  padding-top: 5pc;
+  display: flex;
+  gap:0;
+  justify-content: space-between;
+}
+.worker{
+  width: 47%;
+  height: 100vh;
+  background: radial-gradient(rgb(174, 253, 254),rgb(0, 145, 255));
+  margin-top: 1pc;
+  text-align: center;
+  border-radius: 50%;
+  /* animation: change 20s ease-in infinite; */
+}
+/* @keyframes change {
+  0%{background: radial-gradient(rgb(0, 179, 255),rgb(0, 72, 101));}
+  25%{background: radial-gradient(rgb(226, 174, 254),rgb(120, 0, 180));}
+  50%{background: radial-gradient(rgb(206, 254, 174),rgb(0, 255, 8));}
+  75%{background: radial-gradient(rgb(254, 254, 174),rgb(246, 255, 0));}
+  100%{background: radial-gradient(rgb(174, 254, 243),rgb(0, 183, 255));}
+  
+} */
+.slogan{
+  margin-left: 3pc;
+  font-family:"Montserrat Alternates" ;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+h2{
+  color: black;
+  font-size: 5pc;
+}
+.worker .pic{
+  width: 35pc;
+  margin: auto;
+}
+.arrow-down{
+  margin-top: -4pc;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-size: 3pc;
+  animation: bounce-top 2s ease-in forwards infinite;
+}
+@-webkit-keyframes bounce-top {
+  0% {
+    -webkit-transform: translateY(-45px);
+            transform: translateY(-45px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+    opacity: 1;
+  }
+  24% {
+    opacity: 1;
+  }
+  40% {
+    -webkit-transform: translateY(-24px);
+            transform: translateY(-24px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  65% {
+    -webkit-transform: translateY(-12px);
+            transform: translateY(-12px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  82% {
+    -webkit-transform: translateY(-6px);
+            transform: translateY(-6px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  93% {
+    -webkit-transform: translateY(-4px);
+            transform: translateY(-4px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  25%,
+  55%,
+  75%,
+  87% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+    opacity: 1;
+  }
+}
+
+/*-------------------------------services---------------*/
+.section2{
+  padding: 10pc 5pc;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.searchcont{
+  margin-left: 2pc;
+  width: 70%;
+}
+.searchcont input{
+  width: 100%;
+  border: none;
+  margin-bottom: 1pc;
+  color: black;
+  background-color: white;
+  box-shadow: 0px 0px 10px grey;
+}
+.servicecont{
+  width: 100%;
+  padding: 10pc 5pc;
+  padding: 1pc 0pc;
+  display: flex;
+  justify-content: space-around;
+}
+.works{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 10px;
+  overflow: hidden;
+  font-weight: bolder;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.4s all;
+}
+.works p{
+  background-color: black;
+  font-size: 1.5pc;
+  border-radius: 5px;
+}
+.works img{
+  width: 30pc;
+  border-radius: 5px;
+  height: 18pc;
+}
+.bookings{
+  width: 20%;
+  background-color: white;
+  border: 2px solid black;
+  padding: 10px 20px;
+  border-radius: 10px;
+  height: max-content;
+  text-align: center;
+}
+.bookings h2{
+  font-size: 20px;
+}
+.popup{
+  position: absolute;
+}
+.bookingsdata{
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(26, 25, 25);
+  border-radius: 5px;
+  gap: 10px;
+}
+.bookingsdata img{
+  width: 6pc;
+  height: 4pc;
+  border-radius: 5px;
+}
+.bookingsdata p{
+  margin-top: 20px;
+  font-size: 1.5pc;
+  color: white;
+}
+.input-cont{
+  margin: auto;
+  width: 50%;
+  gap:20px;
+  height: 20vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.input-cont input{
+  background-color: white;
+  border-radius: 7px;
+  width: 100%;
+  color: black;
+  border: none;
+  box-shadow: 0px 0px 10px rgb(181, 181, 181);
+}
+.booking{
+  background-color: rgb(59, 58, 58);
+  padding: 2pc 1pc;
+  border-radius: 10px;
+  position: absolute;
+  width: 60%;
+  overflow: hidden;
+  position: fixed;
+  margin-top: 10pc;
+  margin-left: 10pc;
+}
+.bookbtn{
+  display: flex;
+}
+.booking form{
+  width: 50%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.booking h2{
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 3pc;
+}
+.booking label{
+  color: white;
+  font-size: 20px;
+}
+.booking button{
+  background-color: white;
+  border-radius: 7px;
+  padding: 5px 20px;
+  margin: auto;
+  width: fit-content;
+  font-size: 1.5pc;
+  border: 2px solid rgb(0, 183, 255);
+  transition: 0.3s;
+}
+.booking button:hover{
+  cursor: pointer;
+  transform: scale(1.1);
+}
+/*--------------------------------------About----------------------------------*/
+.section3{
+  background-color: white;
+}
+.about_cont{
+  height: auto;
+  overflow: hidden;
+  padding-top: 7pc;
+  display: flex;
+  flex-direction: column;
+  gap:0;
+}
+.about_cont h1{
+  font-size: 5pc;
+  margin:0px auto;
+  background: linear-gradient(to right,rgb(4, 193, 223),rgb(8, 133, 211));
+  height: fit-content;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.about_cont p{
+  font-size: 2pc;
+  color: black;
+  padding: 0 5pc;
+}
+.about_cont h3{
+  font-size: 4pc;
+  margin: 2pc auto;
+  color: black;
+}
+.rocket{
+  width: 5pc;
+}
+.about_cont h3 span{
+  color: white;
+}
+.review_cont{
+ width: 100%;
+ height: auto; 
+ padding: 10px;
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: space-around;
+ gap:10px;
+ transition: 0.3s all;
+}
+.client{
+  background-color: rgb(1, 200, 255);
+  height: auto;
+  width: 40pc;
+  padding: 2pc 20px 0px;
+  border-radius: 8px;
+  margin: 1pc 0;
+  transition: 0.3s all;
+  cursor:default;
+}
+.client:hover{
+  transform: scale(105%);
+}
+.client p{
+  color: white;
+  font-size: 20px;
+  padding: 10px 0;
+}
+.client h4{
+  font-size: 20px;
+}
+.profile{
+  width: 6pc;
+  height: 6pc;
+  border-radius: 50%;
+  border: 3px solid white;
+  margin-top: -4pc;
+  background: linear-gradient(to top,rgb(81, 182, 182),rgb(2, 2, 2));
+}
+.star_cont{
+  width: 100%;
+  background-color: rgb(37, 49, 62);
+  text-align: center;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  padding: 10px 20px;
+  font-size: 2pc;
+  color: yellow;
+}
+/*-----------------------media quiries------------------------------------------------------------*/
+@media (max-width:768px) {
+  .slogan h2{
+    margin-left: -1pc;
+    width: fit-content;
+    font-size: 3pc;
+  }
+  .container{
+    overflow: hidden;
+  }
+  center h1{
+  margin-top: 0;
+  }
+  .Steps{
+    padding: 20px 5px;
+  }
+  .Steps h1{
+    font-size: 1.5pc;
+  }
+  .step1{
+    font-size: 1pc;
+    color: white;
+  }
+  .tick{
+    font-size: 2pc;
+  }
+  .worker{
+    width: 100%;
+    height: 80vh;
+    border-radius: 40%;
+  }
+  .worker .pic{
+    width: 30pc;
+    transform: translateX(-2pc);
+  }
+  .start{
+    padding: 10px 20px;
+    font-size: 20px;
+  }
+  .section2{
+    padding: 5pc 5pc;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    gap:3pc;
+  }
+  .booking form{
+    width: 90%;
+  }
+  .booking input{
+    width: 100%;
+  }
+  
+}
+@media (max-width:500px) {
+  .nav ul{
+    display: none;
+  }
+  .icon{
+    font-size: 12px;
+  }
+  .arrow-down{
+    font-size: 3pc;
+    display: block;
+
+  }
+  .icon img{
+    width: 3pc;
+  }
+  .nav .bar_cont{
+    display: block;
+    color: black;
+  }
+  .section1{
+    background: linear-gradient(145deg,rgb(4, 133, 254),rgb(0, 221, 255));
+  }
+  .slogan{
+    margin:0 auto;
+    padding: 0 2pc;
+  }
+  .slogan h2{
+    color: black;
+    position: absolute;
+    top: 7pc;
+    left: 2pc;
+    z-index: 8;
+    font-size: 2pc;
+  }
+  .buttons{
+    display: none;
+  }
+  .container{
+    overflow: hidden;
+  }
+  center h1{
+    font-size: 2.2pc;
+    margin: 0px 0;
+   
+    
+  }
+  .Steps{
+    padding: 30px 10px;
+    display: flex;
+    gap:20px;
+    background: linear-gradient(145deg,rgb(4, 129, 254),rgb(0, 217, 255));
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: 1pc;
+    height: fit-content;
+    align-items: center;
+    cursor: default;
+  }
+  .Steps h1{
+    
+    color: black;
+    font-size: 1.2pc;
+  }
+  .step1{
+    padding: 10px;
+    background: white;
+    color: black;
+    width: 80%;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 0px 10px gray;
+  }
+  .tick{
+    font-size: 1pc;
+  }
+  .worker{
+    width: 100%;
+    height: 100vh;
+    border-radius: 0;
+    border-top-left-radius: 20px;
+    background: linear-gradient(145deg,rgb(158, 221, 255),rgb(0, 179, 255));
+    background-color: none;
+    margin-top: 1pc;
+  }
+  .worker .pic{
+    position: relative;
+    width: 26pc;
+    transform: translateX(-2pc);
+    right: 0;
+    bottom: -10pc;
+  }
+  .section0{
+    display: flex;
+    flex-direction: column;
+  }
+  .part1{
+    width: 100%;
+    background-image: url('images/bg.webp');
+    background-size: cover;
+    background-position: 55%;
+    background-repeat: no-repeat;
+  }
+  .part2{
+    width: 100%;
+    height: fit-content;
+  }
+  .banner{
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1pc;
+  }
+  .banner h1{
+    font-size: 3pc;
+  }
+  .part2 p{
+    font-size: 1pc;
+  }
+  .banner-icon{
+    width: 8pc;
+  }
+  .banner2{
+    align-items: center;
+    margin-bottom: 2pc;
+  }
+  .banner2 h4{
+    font-size: 10px;
+  }
+  .popup-cont{
+    width: 95%;
+    top: 10pc;
+    left: 0.5pc;
+  }
+  input{
+    font-size: 12px;
+  }
+  .login{
+    font-size: 15px;
+  }
+  .close{
+    font-size: 1.5pc;
+  }
+  .about_cont{
+    padding:5pc 0px;
+    margin: 0;
+  }
+  .about_cont h3{
+    padding: 0px 0px 0px 10px;
+    font-size: 12px;
+  }
+  .section3 h1{
+    font-size: 2pc;
+  }
+  .section3 p{
+    font-size: 1pc;
+    padding: 0 20px;
+    margin: 0;
+  }
+  .section3 h3{
+    font-size: 1.3pc;
+    margin-bottom: 0;
+  }
+  .rocket{
+    width: 2pc;
+  }
+  .review_cont{
+    margin-top: -3pc;
+  }
+  .client h4{
+    font-size: 15px;
+  }
+  .star_cont{
+    font-size:20px;
+  }
+  .client p{
+    font-size: 14px;
+  }
+  .profile{
+    width: 5pc;
+    height: 5pc;
+  }
+  .section2{
+    padding: 5pc 10px;
+    width: 100%;
+    overflow: scroll;
+    /* display: grid;
+    grid-template-columns: repeat(1,1fr);
+    gap: 0px; */
+  }
+  .works{
+    width: 100%;
+    background: transparent;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 10px;
+  }
+  .works img{
+    width: 8pc;
+    border-radius: 5px;
+    height: 5pc;
+  }
+  .works p{
+    font-size: 10px;
+    padding: 10px 0px 0px 0px;
+  }
+  .searchcont{
+    width:95%;
+    margin: auto;
+    width: 100%;
+  }
+  .servicecont{
+    display: flex;
+    margin-top: -2pc;
+    flex-direction: column;
+  }
+  /* .input_cont{
+    margin-top: 2pc;
+    margin-left: -50px;
+  } */
+  .input_cont {
+    width: 100%;
+  }
+  .input_cont select{
+    padding: 5px 7px;
+    font-size: 1pc;
+    border-radius: 5px;
+    color: black;
+    transition: 0.3s all;
+  }
+  .input_cont option{
+    color: black;
+    font-size: 10px;
+  }
+  .booking{
+    background-color: rgb(59, 58, 58);
+    border-radius: 10px;
+    position: absolute;
+    width: 70%;
+    overflow: hidden;
+    margin-left: auto;
+    transform: translateX(15%);
+    position: fixed;
+  }
+  .booking h1{
+    font-size: 1.3pc;
+  }
+  .input-cont{
+    width: 90%;
+  }
+  .input_cont input{
+    width: 100%;
+  }
+  .booking button{
+    font-size: 17px;
+  }
+  .bookings{
+    width: 100%;
+    background-color: rgb(1, 200, 255);
+    border-radius: 5px;
+    padding: 1pc 2pc;
+    display: flex;
+    flex-direction:column;
+    align-items: start;
+    margin-left: auto;
+  }
+  .bookingsdata{
+    background-color: rgb(37, 49, 62);
+    border-radius: 5px;
+    padding: 2px 4pc 2px 4px;
+  }
+  .bookingsdata p{
+    color: white;
+    font-size: 15px;
+  }
+}
